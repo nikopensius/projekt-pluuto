@@ -5,8 +5,8 @@ from random import randint
 kasutaja_nimi = input("Kirjuta oma nimi: ")
 õpiandmed = open(kasutaja_nimi + ".txt", "w")
 
-# funktsioon, mis genereerib kasutajale lahendamiseks liitmistehteid
-# funktsioon registreerib, kas vastus on õige või vale ja fikseerib tulemuse
+# programm, mis genereerib kasutajale lahendamiseks liitmistehteid
+# programm registreerib, kas vastus on õige või vale ja fikseerib tulemuse
 # kas kasutaja edu sõltub sellest, millises järjekorras on operandid?
 # hüpotees: lihtsam on arvutada, kui esimene operand on suurema väärtusega kui talle järgnev
 
