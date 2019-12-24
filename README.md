@@ -18,3 +18,12 @@ Mudel1.1 - Tuleks juurde kirjutada rekursiivne funktsioon, mis
 		*) selle, missuguses järjekorras tehted väljastatakse, otsustab programm vastavalt olemasolevatele
 		   andmetele, mida ta loeb tekstifailidest, mis on moodustatud programmi varasema töö käigus.
 		   See on harjutus, et panna programmi juhinduma varasemalt kogutud andmetest.
+
+24.12 13:00
+Mudel1.2 - Rekursiivne funktsioon kirjutamata. See-eest oskab programm arvestada varasemalt kogutud andmetega:
+		esitab õppurile tehted tema jaoks lihtsamal kujul - liidetavate generaator järjestab liidetavad
+		vastavalt eelnevalt kogutud andmetele, kas suurem liidetav enne või väiksem liidetav enne
+	   Edasine samm:
+		Programm peab arvestama ka kasutaja edusamme ning tooma sisse keerulisemaid ülesandeid:
+			*) kui õppuril on "2 + 1 = 3" väga hästi selge, esitab programm pärast järgmist
+			   "2 + 1 = 3" tehet "1 + 2 = 3" tehte.
