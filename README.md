@@ -27,3 +27,7 @@ Mudel1.2 - Rekursiivne funktsioon kirjutamata. See-eest oskab programm arvestada
 		Programm peab arvestama ka kasutaja edusamme ning tooma sisse keerulisemaid ülesandeid:
 			*) kui õppuril on "2 + 1 = 3" väga hästi selge, esitab programm pärast järgmist
 			   "2 + 1 = 3" tehet "1 + 2 = 3" tehte.
+
+25.12 13:40
+Mudel 1.2.1 - Eri sessioonide tulemused on tekstifailis eristatavad,
+	      tulemused salvestatakse sõnastikuse asuvasse järjendisse.
