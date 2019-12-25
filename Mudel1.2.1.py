@@ -44,11 +44,12 @@ if vea_sagedus["järjestatud"] != []:
         for a in range(aput + 1):
             for b in range(a + 1):
                 op_list.append((b, a))
+    # kui viimati polnud liidetavate järjestuses tulemuse kujunemisel vahet
     else:
         for a in range(aput + 1):
             for b in range(aput + 1):
                 op_list.append((a, b))
-
+# kui andmete fail on tühi:
 else:
     for a in range(aput + 1):
         for b in range(aput + 1):
