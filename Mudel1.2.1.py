@@ -21,11 +21,12 @@ aput = int(input("Kui suuri arve täna liidame? "))
 
 
 # avab programmi töö andmete jaoks kausta
+# loeb andmed sõnastikku
 try:
     õpiandmed = open(kasutaja_nimi + str(aput) + ".txt", "r")
     for rida in õpiandmed:
         rida = rida.split()
-        vea_sagedus[rida[0]].append(rida[1])
+        vea_sagedus[rida[0]].append(int(rida[1]))
     õpiandmed.close()
     õpiandmed = open(kasutaja_nimi + str(aput) + ".txt", "w")
 except:
@@ -67,21 +68,23 @@ võrdsed_cnt = 0
 while op_list != []:
     operandid = op_list.pop(randint(0, len(op_list) - 1))
     vastus = input(str(operandid) + " ")
-    
-    if int(vastus) == sum(operandid):
-        print("Tubli! Vastasid õigesti.")
-    else:
-        print("Vastasid valesti. Õige vastus on " + str(operandid[0]))
-        op_list.append(operandid)
-        
-        if operandid[0] > operandid[1]:
-            jatud_cnt += 1
-        elif operandid[0] < operandid[1]:
-            jmata_cnt += 1
+    try:
+        if int(vastus) == sum(operandid):
+            print("Tubli! Vastasid õigesti.")
         else:
-            võrdsed_cnt += 1
-        # kasutaja vea korral kujutatakse liitmistehet graafiliselt
-        kujuta(operandid)
+            print("Vastasid valesti. Õige vastus on " + str(operandid[0]))
+            op_list.append(operandid)
+        
+            if operandid[0] > operandid[1]:
+                jatud_cnt += 1
+            elif operandid[0] < operandid[1]:
+                jmata_cnt += 1
+            else:
+                võrdsed_cnt += 1
+            # kasutaja vea korral kujutatakse liitmistehet graafiliselt
+            kujuta(operandid)
+    except:
+        pass
 
 # kui tsükkel on lõppenud, tõstetakse tulemused (esinenud vigade arvud) vastavasse sõnastikku
 vea_sagedus["järjestatud"].append(jatud_cnt)
