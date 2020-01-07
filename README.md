@@ -31,3 +31,11 @@ Mudel1.2 - Rekursiivne funktsioon kirjutamata. See-eest oskab programm arvestada
 25.12 13:40
 Mudel 1.2.1 - Eri sessioonide tulemused on tekstifailis eristatavad,
 	      tulemused salvestatakse sõnastikuse asuvasse järjendisse.
+
+07.01 16:50
+Mudel 2.0 - 	Uus idee - cue blanking - ehk valikvastustega testis vastuse selle detaili kinnikatmine,
+		mis vastajal selle vastuse 'õigsusega' seondub.
+		Hüpotees: kui äratundmiseks olulisi detaili järjest kinni katta,
+		peaks lõpuks kogu õige vastus meelde jääma, ka väljaspool antud testi konteksti.
+		Eesmärk: masin, mis õpib, millised on cue'd ehk detailid, mille äratundmine lubab kasutajal õigesti vastata.
+		Selle saavutamiseks katab vastusevariantides kinni (blankib) juhuslikke sõnu ja registreerib eksimused kasutaja eksimused
