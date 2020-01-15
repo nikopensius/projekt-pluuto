@@ -22,7 +22,7 @@ for rida in f:
 f.close()
 
 # tekstifail avati, ta sisu loeti sõnastikku,
-# järjenumbriga algavad küsimused on sõnastiku võtmed,
+# järjenumbriga algavad küsimused on sõnastikku võtmed,
 # tekstifaili tühjad read jäeti vahele,
 # küsimusele järgnenud read (vastused) lisati järjendisse, mis on küsimusele vastav väärtus
 # tekstifail pandi kinni
@@ -42,8 +42,20 @@ def print_vastus(number, väärtus):
             
         else:
             print(number[0] + väärtus[0]) # prindib vale vastusevariandi
-
+        
+        uus_lause = ""
+        jada = väärtus[0].split()
+        mitmes = randint(0, len(jada) - 1)
+        for sõna in jada:
+            if jada.index(sõna) == mitmes:
+                uus_lause = uus_lause + "====" + " "
+            else:
+                uus_lause = uus_lause + sõna + " "
+        blanked.append(uus_lause)
+        
         print_vastus(number[1:], väärtus[1:]) # prindib järgmise vastuse-variandi
+        
+            
 
 """def blanker(järjend):
     for lause in järjend:
@@ -74,11 +86,13 @@ while True:
         random.shuffle(sõnastik[võti]) # vastusevariandid lampi järjekorda
         
         õige_vastus = []
+        blanked = []
         print_vastus(jrk_numbrid, sõnastik[võti]) # prindib lambis järjekorras vastused ilusti korrastatud jrk-numbritega
     
         kasutaja_vastus = input("Sisesta õige vastuse number: ")
         
         if kasutaja_vastus in õige_vastus[0]:
             print("Õige vastus!")
-
-        
+            sõnastik[võti + "_b"] = blanked
+            print(sõnastik[võti + "_b"])
+            print(sõnastik.keys())
